@@ -51,4 +51,13 @@ We encourage you to clone this repo and follow along.
 - Applied index fix to code, ran test again, it passes.
 - Refactored todos update by mapping ids.
 - Validated tests run as expected.
-- 
+
+# Video 7: Filters + Data Driven Tests. 
+- Created a footer spec file, added context for singular todo when only 1 todo remains
+- Removed hard coded value and implemented check for 1 todo or many
+- Verified test worked as expected
+- Added second context and test for multiple todos, verified it works as expected
+- Created test for filtered Active Todos
+- Added utility method for filtering todos and 
+- Implemented router inside render method for footer filtering 
+- Implemented multiple tests with data for data driven tests for footer filtering
