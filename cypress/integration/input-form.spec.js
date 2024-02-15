@@ -1,6 +1,6 @@
 describe('Input form', () => {
     beforeEach(() => {
-        cy.visit('/')
+        cy.seedAndVisit([])
     })
     context('Basic Tests', () => {
         it('focuses input on load', () => {
@@ -48,9 +48,9 @@ describe('Input form', () => {
             .type('test{enter}')
 
             cy.get('.todo-list li')
-            .should('not.exist')
+            .should('not.exist',)
 
-            cy.get('.error')
+            cy.get('#errorSubmit')
             .should('be.visible')
         })
     })
