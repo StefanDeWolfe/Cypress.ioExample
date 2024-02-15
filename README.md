@@ -15,6 +15,12 @@ https://www.youtube.com/playlist?list=PL8GlT7H3xOcJbXNVnM6lTT3Fec8dikotY.
 - abstracted the url to cypress.json as baseUrl
 - verified all tests run
 
+# Video 3: Form submission and XHRs. 
+- Created a new context and test for form submit of todo item.
+- Created a XHR Stub API services for submitting a todo item.
+- Created another test that stubs an error with XHR
+- Added error handling to the TodoApp
+
 # Build and test an application using Cypress
 
 This repository is the starting point for an official Cypress tutorial. 
