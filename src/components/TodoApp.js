@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
 import Footer from './Footer'
-import {saveTodo} from '../lib/service'
+import {saveTodo, loadTodos} from '../lib/service'
 
 export default class TodoApp extends Component {
   constructor(props) {
@@ -17,29 +17,36 @@ export default class TodoApp extends Component {
     this.handleTodoSubmit = this.handleTodoSubmit.bind(this)
   }
 
-handleNewTodoChange (evt) {
-  this.setState({currentTodo: evt.target.value})
-}
+  componentDidMount () {
+    loadTodos()
+    .then( ({data}) => this.setState({ todos: data }))
+    .catch( () => this.setState({errorLoad: true}))
+  }
 
-handleTodoSubmit (evt) {
-  evt.preventDefault()
-  const newTodo = {name:  this.state.currentTodo, isComplete: false}
-  saveTodo(newTodo)
-  .then( ({data}) => this.setState({
-    todos: this.state.todos.concat(data),
-    currentTodo: ''
-  }))
-  .catch( () => this.setState({error: true}))
+  handleNewTodoChange (evt) {
+    this.setState({currentTodo: evt.target.value})
+  }
 
-}
+  handleTodoSubmit (evt) {
+    evt.preventDefault()
+    const newTodo = {name:  this.state.currentTodo, isComplete: false}
+    saveTodo(newTodo)
+    .then( ({data}) => this.setState({
+      todos: this.state.todos.concat(data),
+      currentTodo: ''
+    }))
+    .catch( () => this.setState({error: true}))
 
-render () {
+  }
+
+  render () {
     return (
       <Router>
         <div>
           <header className="header">
             <h1>todos</h1>
-            {this.state.error ? <span className='error'>Uh Oh! Todo submit failed!</span> : null}
+            {this.state.errorLoad ? <span id='errorLoad' className='error'>Uh Oh! Todo load failed!</span> : null}
+            {this.state.error ? <span id='errorSubmit' className='error'>Uh Oh! Todo submit failed!</span> : null}
             <TodoForm 
               currentTodo={this.state.currentTodo}
               handleTodoSubmit={this.handleTodoSubmit}
