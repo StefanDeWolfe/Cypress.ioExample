@@ -42,3 +42,13 @@ We encourage you to clone this repo and follow along.
 - Wrote a test to remove a todo by using an alias.
 - Implemented DELETE in service and implemented delete todo methods and calls to delete from the delete button.
 - Verified tests work as expected
+
+# Video 6: Toggling + Debugging. 
+- Created a new test to mark a todo item as complete.
+- Added PUT to service and added handleToggle to App and wired it up.
+- Used the debugger statement to start to debug duplicate entry issue.
+- Used Cypress Dev Tools to debug issue.
+- Applied index fix to code, ran test again, it passes.
+- Refactored todos update by mapping ids.
+- Validated tests run as expected.
+- 
