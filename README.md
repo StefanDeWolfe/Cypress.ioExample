@@ -3,7 +3,6 @@ This is my tutorial code following along with the Cypress.io's Youtube video ser
 https://www.youtube.com/playlist?list=PL8GlT7H3xOcJbXNVnM6lTT3Fec8dikotY.
 
 # Build and test an application using Cypress
-
 This repository is the starting point for an official Cypress tutorial. 
 We encourage you to clone this repo and follow along.
 
@@ -53,11 +52,24 @@ We encourage you to clone this repo and follow along.
 - Validated tests run as expected.
 
 # Video 7: Filters + Data Driven Tests. 
-- Created a footer spec file, added context for singular todo when only 1 todo remains
-- Removed hard coded value and implemented check for 1 todo or many
-- Verified test worked as expected
-- Added second context and test for multiple todos, verified it works as expected
-- Created test for filtered Active Todos
-- Added utility method for filtering todos and 
-- Implemented router inside render method for footer filtering 
-- Implemented multiple tests with data for data driven tests for footer filtering
+- Created a footer spec file, added context for singular todo when only 1 todo remains.
+- Removed hard coded value and implemented check for 1 todo or many.
+- Verified test worked as expected.
+- Added second context and test for multiple todos, verified it works as expected.
+- Created test for filtered Active Todos.
+- Added utility method for filtering todos and .
+- Implemented router inside render method for footer filtering .
+- Implemented multiple tests with data for data driven tests for footer filtering.
+- Validated tests run as expected.
+
+# Video 8 & 9: Full end to end tests. 
+- Created a smoke test spec file. 
+- Added todos to db.json so we can use it as a local database.
+- Created test that removes any data, then adds new todo.
+- Added delay into code to simulate non-local communication.
+- Aliased the POST api, and added a wait for POST to complete in test.
+- Added data to allow for data driven testing.
+- Added test that deletes all todos using an alias, get-each($el)-wrap and wait for del to finish.
+- Added Toggling todos that marks all todos as complete, then incomplete using creatd method to not repeat code.
+- All tests pass.
+- Added ability to run headless by adding "cypress:all": "cypress run" to package.json.
