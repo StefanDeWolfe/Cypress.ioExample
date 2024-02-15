@@ -1,5 +1,5 @@
 # This is me following along
-
+This is my tutorial code following along with the Cypress.io's Youtube video: https://youtu.be/KfTH2d-JZ6k.
 
 # Build and test an application using Cypress
 
