@@ -31,3 +31,4 @@ We encourage you to clone this repo and follow along.
 - Added functionality for GET in service and TodoApp.
 - Created a custom command to seed and visit app.
 - Updated previous tests to allow for including the custom command.
+- Verified all tests run as expected.
