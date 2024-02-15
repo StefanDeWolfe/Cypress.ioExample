@@ -32,3 +32,13 @@ We encourage you to clone this repo and follow along.
 - Created a custom command to seed and visit app.
 - Updated previous tests to allow for including the custom command.
 - Verified all tests run as expected.
+
+# Video 5: To Do Item Behavior. 
+- Created a new list-items specification. 
+- Wrote a test to see if a todo item is checked.
+- Modified app to show if a todo item is checked.
+- Wrote a test to validate the number of remaining todos that are unchecked.
+- Modified app to show completed todo items.
+- Wrote a test to remove a todo by using an alias.
+- Implemented DELETE in service and implemented delete todo methods and calls to delete from the delete button.
+- Verified tests work as expected
